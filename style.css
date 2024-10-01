@@ -101,6 +101,7 @@ body {
     transition: .3s;
   }
   nav ul li a{
+    padding: 10px;
     text-decoration: none;
     color: #EFEEF5;
     transition: .5;
@@ -111,6 +112,8 @@ body {
     color: #591BC5;;
   }
   nav ul li:hover{
+    border-radius: 10px 0 10px 0;
+    transition: 1s;
     background: #EFEEF5;
     text-decoration: none;
   }
@@ -163,6 +166,7 @@ body {
   }
   .header-content button:hover{
     border-radius: 0 15px 0 15px ;
+    transition: 1s;
   }
   /* Animate Background*/
   @keyframes Gradient {
@@ -189,7 +193,7 @@ body {
 
 @media screen and (max-width: 760px){
     nav ul{
-        width: 250px;
+        width: auto;
     }
     .logo{
         font-size: 10px;

@@ -10,40 +10,52 @@
     <link rel="stylesheet" href="./modal.css">
 </head>
 <body>
-    <!-- Background & animion & navbar & title -->
-  <div class="container-fluid">
-    <!-- Background animtion-->
+    <!-- Background & animation & navbar & title -->
+    <div class="container-fluid">
+        <!-- Background animation-->
         <div class="background">
-           <div class="cube"></div>
-           <div class="cube"></div>
-           <div class="cube"></div>
-           <div class="cube"></div>
-          <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
         </div>
-    <!-- header -->
-       <header>
-    <!-- navbar -->
-         <nav>
+        
+        <!-- header -->
+        <header>
+            <!-- navbar -->
+            <nav>
                 <!-- logo -->
-          <div class="logo"><span>SmtMaks</span></div>
-            <ul>
-               <li><a href="#"> Главная</a></li>
-                <li><a href="#">О нас</a></li>
-                <li><a href="#">Наши сервисы</a></li>
-                <li><a href="#">Контакты</a></li>
-             </ul>
-           </nav>
-    <!-- title & content -->
-          <section class="header-content">
-             <h1>Добро пожаловать</h1>
-            <p> Приветствуем вас всей дружной командой SmtMaks<br>
-               с нами вы будете на новом уровне.</p>
-            <button>познакомится</button>
-          </section>
-      </header>
+                <div class="logo"><span>SmtMaks</span></div>
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Наши сервисы</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+            
+            <!-- title & content -->
+            <section class="header-content">
+                <h1>Добро пожаловать</h1>
+                <p>Приветствуем вас всей дружной командой SmtMaks<br>
+                   с нами вы будете на новом уровне.</p>
+                <button id="myBtn">познакомиться</button>
+            </section>
+        </header>
 
+         <!-- Модальный -->
+         <div id="myModal" class="modal">
+            <!-- Модальное содержание -->
+            <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Некоторый текст в модальном..</p>
+            <p>Некоторый текст в модальном..</p>
+            <p>Некоторый текст в модальном..</p>
+            </div>
+         
+         </div>
 
-
-      <script src="./script.js"></script>
+        <script src="./script.js"></script>
 </body>
 </html>

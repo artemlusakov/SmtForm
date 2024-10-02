@@ -15,24 +15,118 @@
   /* Модальное содержание/коробка */
   .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% сверху и по центру */
+    border-radius: 20px 0;
+    margin: 5% auto; /* 15% сверху и по центру */
     padding: 20px;
     border: 1px solid #888;
-    height: 50%;
     width: 80%; /* Может быть больше или меньше, в зависимости от размера экрана */
+    height: 70%;
   }
   
   /* Кнопка закрытия */
   .close {
-    color: #aaa;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    background-color: #fefefe;
+    height: 50px;
+    border-radius: 100px;
+    padding: 10px;
+    margin: 20px;
     float: right;
     font-size: 28px;
     font-weight: bold;
+    transition: 1.5s;
   }
   
   .close:hover,
   .close:focus {
-    color: black;
+    color: #ffffff;
+    background-color: #000000;
+    padding: 0px 15px;
     text-decoration: none;
     cursor: pointer;
+
+    transition: 1.5s;
   }
+
+.SmtForm{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 100%;
+}
+
+.SmtFormBox{
+  display: flex;
+  justify-content: space-around;
+}
+.SmtFormMiniBox{
+  display: flex;
+  justify-content: space-between;
+}
+.SmtFormMiniBox input{
+  width: 50%;
+}
+
+.SmtForm input{
+  height: 45px;
+}
+
+.SmtFormContacts{
+  display: flex;
+  flex-direction: column;
+}
+.SmtFormContacts {
+  width: 45%;
+}
+
+.SmtFormPerformance{
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Нижний блок */
+
+.SmtFormLevelProduct{
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+.SmtFormLevelProduct label{
+  display: flex;
+  align-items: center;
+}
+
+.SmtFormDescripteon{
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+.SmtFormDescripteon textarea{
+  height: 100%;
+  resize: none; 
+}
+
+
+.SmtFormButton{
+  display: flex;
+  justify-content: end;
+  width: 98%;
+}
+.SmtFormButton button{
+  cursor: pointer;
+  border: 1px solid transparent;
+  height: 50px;
+  width: 200px;
+  background-color: #3f62ff;
+  color: #fefefe;
+  border-radius: 0 15px;
+  transition: 1.5s;
+}
+.SmtFormButton button:hover,
+.SmtFormButton button:focus{
+  border-radius:  15px 0;
+  transition: 1.5s;
+}

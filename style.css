@@ -98,7 +98,7 @@ body {
     align-items: center;
     justify-content: center;
     float: left;
-    transition: .3s;
+    transition: border-radius 1s;
   }
   nav ul li a{
     padding: 10px;
@@ -113,7 +113,7 @@ body {
   }
   nav ul li:hover{
     border-radius: 10px 0 10px 0;
-    transition: 1s;
+    transition: border-radius 1s;
     background: #EFEEF5;
     text-decoration: none;
   }
@@ -162,7 +162,7 @@ body {
     border-radius: 15px 0 15px 0;
     padding: 10px;
     cursor:pointer;
-    transition: .3s;
+    transition: border-radius 1s;
   }
   .header-content button:hover{
     border-radius: 0 15px 0 15px ;

@@ -49,67 +49,64 @@
             <span class="close">&times;</span>
             <!-- Модальное содержание -->
             <div class="modal-content">
-                <form class="SmtForm" action="">
+                <form class="SmtForm" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="2166ee3d-f246-433d-8601-f215b29a6a21">
                     <div class="SmtFormBox">
                         <div class="SmtFormContacts">
-                            <h3>Контактная информация</h3>
-                            <input type="text" placeholder="Организация">
-                            <input type="text" placeholder="Город">
-                            <input type="text" placeholder="Контактное лицо, ФИО">
-                            <input type="text" placeholder="Должность">
-                            <input type="text" placeholder="Телефон, факс">
-                            <input type="text" placeholder="Электронная почта">
-                            <input type="text" placeholder="Примечание">
+                            <h3>Контактная информация:</h3>
+                            <input name="Организация" type="text" placeholder="Организация">
+                            <input name="Город" type="text" placeholder="Город">
+                            <input name="ФИО" type="text" placeholder="Контактное лицо, ФИО">
+                            <input name="Должность" type="text" placeholder="Должность">
+                            <input name="Телефон" type="phone" class="tel" placeholder="Телефон, факс">
+                            <input name="Электронная почта" type="email" placeholder="Электронная почта">
+                            <input name="Примечание" type="text" placeholder="Примечание">
                         </div>
 
                         <div class="SmtFormPerformance">
-                            <h3>Сведения про производительности</h3>
-                            <input type="text" placeholder="Макс, производительность, комп/час">
-                            <input type="text" placeholder="Планируемое количество изделий">
-                            <input type="text" placeholder="Максимальное количество компонентов на плате">
-                            <input type="text" 
-                            placeholder=
-                            "Номенклатура устанавливаемых элементов*
-                            *информация необходима для проработки автомата установки
-                            компонентов по вместимости элементной базы в слоты под
-                            питатели">
+                            <h3>Сведения про производительности:</h3>
+                            <input name="комп/час" type="text" placeholder="Макс, производительность, комп/час">
+                            <input name="Планируемое количество изделий" type="text" placeholder="Планируемое количество изделий">
+                            <input name="Максимальное количество компонентов на плате" type="text" placeholder="Максимальное количество компонентов на плате">
+                            <input name="Номенклатура" type="text" placeholder="Номенклатура устанавливаемых элементов">
 
                             <div class="SmtFormMiniBox">
-                                <input type="text" placeholder="Размер печатной платы, мм">
-                                <input type="text" placeholder="Наименьший/наибольший компонент">
+                                <input name="Размер печатной платы" type="text" placeholder="Размер печатной платы, мм">
+                                <input name="Наименьший/наибольший компонент" type="text" placeholder="Наименьший/наибольший компонент">
                             </div>
 
                             <div class="SmtFormMiniBox">
-                                <input type="text" placeholder="Наименьший шаг вводов, мм">
-                                <input type="text" placeholder="Максимальная высота компонента, мм">
+                                <input name="Наименьший шаг вводов" type="text" placeholder="Наименьший шаг вводов, мм">
+                                <input name="Максимальная высота компонента" type="text" placeholder="Максимальная высота компонента, мм">
                             </div>
 
-                            <input type="text" placeholder="Состав, тип паяльной пасты, припоя.">
+                            <input name="Состав, тип паяльной пасты, припоя" type="text" placeholder="Состав, тип паяльной пасты, припоя.">
                         </div>
                     </div>
 
                     <div class="SmtFormBox">
                         <div class="SmtFormLevelProduct">
-                            <h3>Уровень производственного процеса</h3>
-                            <label> <input type="checkbox"> Мелкосерийное производство</label>
-                            <label> <input type="checkbox"> Среднесерийное производство</label>
-                            <label> <input type="checkbox"> Крупносерийное/массовое производство</label>
+                            <h3>Уровень производственного процеса:</h3>
+                            <label> <input name="Мелкосерийное производство" type="checkbox" class="checkbox" > <h4>Мелкосерийное производство</h4></label>
+                            <label> <input name="Среднесерийное производство" type="checkbox" class="checkbox" > <h4>Среднесерийное производство</h4></label>
+                            <label> <input name="Крупносерийное/массовое производство" type="checkbox" class="checkbox" > <h4>Крупносерийное/массовое производство</h4</label>
                         </div>
 
                         <div class="SmtFormDescripteon">
                             <h3>Комментарии:</h3>
-                            <textarea></textarea>
+                            <textarea name="Комментарии"></textarea>
                         </div>
                     </div>
 
                     <div class="SmtFormButton">
-                        <button>Отправить</button>
+                        <button type="submit">Отправить</button>
                     </div>
                 </form>
             </div>
          
          </div>
 
+        <script src="./modal.js"></script>
         <script src="./script.js"></script>
 </body>
 </html>

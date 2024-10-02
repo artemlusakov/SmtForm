@@ -71,8 +71,14 @@
 
 .SmtForm input{
   height: 45px;
+  margin-top: 5px;
+  font-size: 20px;
+}
+.SmtForm input::placeholder{
+  font-size: 13px;
 }
 
+/* Верхний блок */
 .SmtFormContacts{
   display: flex;
   flex-direction: column;
@@ -97,6 +103,12 @@
 .SmtFormLevelProduct label{
   display: flex;
   align-items: center;
+}
+.SmtFormLevelProduct label h4{
+  margin-left: 10px;
+}
+.checkbox{
+  cursor: pointer;
 }
 
 .SmtFormDescripteon{

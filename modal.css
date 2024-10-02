@@ -16,7 +16,7 @@
   .modal-content {
     background-color: #fefefe;
     border-radius: 20px 0;
-    margin: 5% auto; /* 15% сверху и по центру */
+    margin: 5% auto; 
     padding: 20px;
     border: 1px solid #888;
     width: 80%; /* Может быть больше или меньше, в зависимости от размера экрана */
@@ -142,3 +142,11 @@
   border-radius:  15px 0;
   transition: 1.5s;
 }
+
+@media screen and (max-width: 1600px){
+  .modal-content {
+    margin: 2% auto;
+    height: 85%;
+  }
+}
+

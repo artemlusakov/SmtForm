@@ -24,3 +24,26 @@
     border: 1px solid #888;
     height: 100%;
 }
+
+.modalContacts-content h3{
+    font-size: 25px;
+}
+
+.modalContacts-content-info{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 30%;
+}
+.modalContacts-content-info a{
+    text-decoration: none;
+}
+.modalContacts-content-info li{
+    padding-top: 2px;
+    list-style: none;
+}
+
+.modalContacts-content-masenger{
+    padding-top: 30px;
+}

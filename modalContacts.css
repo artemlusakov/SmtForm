@@ -1,0 +1,26 @@
+/* Основные стили для .modalContacts */
+.modalContacts {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* Стили для .modalContacts-content */
+.modalContacts-content {
+    position: fixed;
+    left: 100%;
+    width: 40%; /* Увеличьте ширину для более плавного эффекта */
+    transition:  1s;
+    font-family: "Fira Sans Condensed", sans-serif;
+    background-color: #fefefe;
+    border-radius:0 20px 20px 0px;
+    padding: 20px;
+    border: 1px solid #888;
+    height: 100%;
+}

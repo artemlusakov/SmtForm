@@ -1,23 +1,40 @@
-// Получить модальный
-var modal = document.getElementById("myModal");
-// Получить кнопку, которая открывает модальный
-var btn = document.getElementById("myBtn");
-// Получить элемент <span>, который закрывает модальный
-var span = document.getElementsByClassName("close")[0];
+// Получить модальные элементы
+let modal = document.querySelector(".modal");
+let modalContacts = document.querySelector(".modalContacts");
 
-// Когда пользователь нажимает на кнопку, откройте модальный
+// Получить кнопки, которые открывают модальные окна
+let btn = document.getElementById("myBtn");
+let btnContacts = document.getElementById("myBtnContacts");
+
+// Получить элемент <span>, который закрывает модальные окна
+let span = document.querySelector(".close");
+
+// Когда пользователь нажимает на кнопку, открывает модальный
 btn.onclick = function() {
   modal.style.display = "block";
 }
 
-// Когда пользователь нажимает на <span> (x), закройте модальное окно
-span.onclick = function() {
-  modal.style.display = "none";
+// Анимация для модального окна контактов
+btnContacts.onclick = function() {
+  let modalContent = modalContacts.querySelector('.modalContacts-content');
+  modalContacts.style.display = 'block';
+  modalContent.style.left = '-100%';
+  
+  setTimeout(function() {
+    modalContent.style.left = '0';
+  }, 50); // Небольшая задержка для плавности анимации
 }
 
-// Когда пользователь щелкает в любом месте за пределами модального, закройте его
+// Когда пользователь нажимает на <span> (x), закрывает модальные окна
+span.onclick = function() {
+  let modalContent = modal.querySelector('.modal-content');
+  modal.style.display = "none";  
+}
+
+// Когда пользователь щелкает в любом месте за пределами модальных окон, закрывает их
 window.onclick = function(event) {
-  if (event.target == modal) {
+  if (event.target == modal || event.target == modalContacts) {
     modal.style.display = "none";
+    modalContacts.style.display = 'none';
   }
 }

@@ -1,27 +1,25 @@
+// Функция открытия модального окна
 let modal = document.querySelector(".modal");
 let btn = document.getElementById("myBtn");
-let span = document.querySelector(".close");
 
-// Когда пользователь нажимает на кнопку, открывает модальный
+
+
+// Когда пользователь нажимает на кнопку, открывает модальный 
 btn.onclick = function() {
-    modal.style.display = "block";
-  }
-// Когда пользователь нажимает на <span> (x), закрывает модальные окна
-span.onclick = function() {
-    let modalContent = modal.querySelector('.modal-content');
-    modal.style.display = "none";  
-  }
-// Когда пользователь щелкает в любом месте за пределами модальных окон, закрывает их
-window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
+    modal.style.display = 'block';
 
-    }
+    let modalOpasiti = document.querySelector(".modal-content")
+    modalOpasiti.style.top = "-100%"
+    setTimeout(function() {
+        modalOpasiti.style.top = "0"
+        modalOpasiti.style.position = "relative";
+      
+      }, 50)
   }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
-
+// Валидация на количество 1го чек бокса
 const checkboxs = document.querySelectorAll(".checkbox");
 
 checkboxs.forEach(checkbox => {

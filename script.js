@@ -1,5 +1,4 @@
 // Получить модальные элементы
-let modal = document.querySelector(".modal");
 let modalContacts = document.querySelector(".modalContacts");
 
 // Получить кнопки, которые открывают модальные окна
@@ -7,7 +6,7 @@ let btn = document.getElementById("myBtn");
 let btnContacts = document.getElementById("myBtnContacts");
 
 // Получить элемент <span>, который закрывает модальные окна
-let span = document.querySelector(".close");
+let spanContacts = document.querySelector(".closeContacts");
 
 // Когда пользователь нажимает на кнопку, открывает модальный
 btn.onclick = function() {
@@ -26,9 +25,8 @@ btnContacts.onclick = function() {
 }
 
 // Когда пользователь нажимает на <span> (x), закрывает модальные окна
-span.onclick = function() {
-  let modalContent = modal.querySelector('.modal-content');
-  modal.style.display = "none";  
+spanContacts.onclick = function() {
+  modalContacts.style.display = "none";  
 }
 
 // Когда пользователь щелкает в любом месте за пределами модальных окон, закрывает их

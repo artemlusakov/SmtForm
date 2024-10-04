@@ -208,12 +208,18 @@ body {
     }
   }
 
-@media screen and (max-width: 760px){
+@media screen and (max-width: 500px){
     nav ul{
         width: auto;
+        margin: 2px;
+    }
+    nav ul li a{
+
+      font-size: 10px;
     }
     .logo{
-        font-size: 10px;
-        height: 30px;
+        font-size: 7px;
+        height: 25px;
     }
 }
+

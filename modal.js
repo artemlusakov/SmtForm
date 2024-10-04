@@ -1,3 +1,27 @@
+let modal = document.querySelector(".modal");
+let btn = document.getElementById("myBtn");
+let span = document.querySelector(".close");
+
+// Когда пользователь нажимает на кнопку, открывает модальный
+btn.onclick = function() {
+    modal.style.display = "block";
+  }
+// Когда пользователь нажимает на <span> (x), закрывает модальные окна
+span.onclick = function() {
+    let modalContent = modal.querySelector('.modal-content');
+    modal.style.display = "none";  
+  }
+// Когда пользователь щелкает в любом месте за пределами модальных окон, закрывает их
+window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+
+    }
+  }
+
+
+
+
 const checkboxs = document.querySelectorAll(".checkbox");
 
 checkboxs.forEach(checkbox => {

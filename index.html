@@ -79,38 +79,38 @@
             <span class="close">&times;</span>
             <!-- Модальное содержание -->
             <div class="modal-content">
-                <form class="SmtForm" action="https://api.web3forms.com/submit" method="POST">
+                <form class="SmtForm" id="MainForm" action="https://api.web3forms.com/submit" method="POST">
                     <input type="hidden" name="access_key" value="2166ee3d-f246-433d-8601-f215b29a6a21">
                     <div class="SmtFormBox">
                         <div class="SmtFormContacts">
                             <h3>Контактная информация:</h3>
-                            <input name="Организация" type="text" placeholder="Организация">
-                            <input name="Город" type="text" placeholder="Город">
-                            <input name="ФИО" type="text" placeholder="Контактное лицо, ФИО">
-                            <input name="Должность" type="text" placeholder="Должность">
-                            <input name="Телефон" type="phone" class="tel" placeholder="Телефон, факс">
-                            <input name="Электронная почта" type="email" placeholder="Электронная почта">
-                            <input name="Примечание" type="text" placeholder="Примечание">
+                            <input required class="required-field" name="Организация" type="text" placeholder="Организация">
+                            <input required class="required-field" name="Город" type="text" placeholder="Город">
+                            <input required class="required-field" name="ФИО" type="text" placeholder="Контактное лицо, ФИО">
+                            <input required class="required-field" name="Должность" type="text" placeholder="Должность">
+                            <input required class="tel required-field" name="Телефон" type="phone" placeholder="Телефон, факс">
+                            <input required class="required-field" name="Электронная почта" type="email" placeholder="Электронная почта">
+                            <input required class="required-field" name="Примечание" type="text" placeholder="Примечание">
                         </div>
 
                         <div class="SmtFormPerformance">
                             <h3>Сведения про производительности:</h3>
-                            <input name="комп/час" type="text" placeholder="Макс, производительность, комп/час">
-                            <input name="Планируемое количество изделий" type="text" placeholder="Планируемое количество изделий">
-                            <input name="Максимальное количество компонентов на плате" type="text" placeholder="Максимальное количество компонентов на плате">
-                            <input name="Номенклатура" type="text" placeholder="Номенклатура устанавливаемых элементов">
+                            <input required class="required-field" name="комп/час" type="text" placeholder="Макс, производительность, комп/час">
+                            <input required class="required-field" name="Планируемое количество изделий" type="text" placeholder="Планируемое количество изделий">
+                            <input required class="required-field" name="Максимальное количество компонентов на плате" type="text" placeholder="Максимальное количество компонентов на плате">
+                            <input required class="required-field" name="Номенклатура" type="text" placeholder="Номенклатура устанавливаемых элементов">
 
                             <div class="SmtFormMiniBox">
-                                <input name="Размер печатной платы" type="text" placeholder="Размер печатной платы, мм">
-                                <input name="Наименьший/наибольший компонент" type="text" placeholder="Наименьший/наибольший компонент">
+                                <input required class="required-field" name="Размер печатной платы" type="text" placeholder="Размер печатной платы, мм">
+                                <input required class="required-field" name="Наименьший/наибольший компонент" type="text" placeholder="Наименьший/наибольший компонент">
                             </div>
 
                             <div class="SmtFormMiniBox">
-                                <input class="inputMM"  name="Наименьший шаг вводов" type="text" placeholder="Наименьший шаг вводов, мм">
-                                <input class="inputMM"  name="Максимальная высота компонента" type="text" placeholder="Максимальная высота компонента, мм">
+                                <input class="required-field" required class="inputMM"  name="Наименьший шаг вводов" type="text" placeholder="Наименьший шаг вводов, мм">
+                                <input class="required-field" required class="inputMM"  name="Максимальная высота компонента" type="text" placeholder="Максимальная высота компонента, мм">
                             </div>
 
-                            <input name="Состав, тип паяльной пасты, припоя" type="text" placeholder="Состав, тип паяльной пасты, припоя.">
+                            <input required name="Состав, тип паяльной пасты, припоя" type="text" placeholder="Состав, тип паяльной пасты, припоя.">
                         </div>
                     </div>
 
@@ -118,9 +118,9 @@
                         <div class="SmtFormMiniBoxQR">
                             <div class="SmtFormLevelProduct">
                                 <h3>Уровень производственного процеса:</h3>
-                                <label> <input name="Мелкосерийное производство" type="checkbox" class="checkbox" > <h4>Мелкосерийное производство</h4></label>
-                                <label> <input name="Среднесерийное производство" type="checkbox" class="checkbox" > <h4>Среднесерийное производство</h4></label>
-                                <label> <input name="Крупносерийное/массовое производство" type="checkbox" class="checkbox" > <h4>Крупносерийное/массовое производство</h4</label>
+                                <label> <input  class="required-field" name="Мелкосерийное производство" type="checkbox" class="checkbox" > <h4>Мелкосерийное производство</h4></label>
+                                <label> <input  class="required-field" name="Среднесерийное производство" type="checkbox" class="checkbox" > <h4>Среднесерийное производство</h4></label>
+                                <label> <input  class="required-field" name="Крупносерийное/массовое производство" type="checkbox" class="checkbox" > <h4>Крупносерийное/массовое производство</h4</label>
                             </div>
 
                             <img src="./media/img/5470016171924381051.jpg" alt="">
@@ -174,10 +174,11 @@
                 </div>
             </div>
          </div>
-         <script src="./script.js"></script>
-        <script src="./modal.js"></script>
+         <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+         <script src="./JS/modalContacts.js"></script>
+        <script src="./JS/modal.js"></script>
 
-        <script src="./Close.js"></script>
+        <script src="./JS/Close.js"></script>
 
 </body>
 </html>

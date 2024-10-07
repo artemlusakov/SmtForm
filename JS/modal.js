@@ -68,3 +68,33 @@ window.addEventListener("DOMContentLoaded", function() {
 
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('MainForm');
+  
+  // Обработчик отправки формы
+  form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Проверяем заполненность всех обязательных полей
+      let isValid = true;
+      form.querySelectorAll('.required-field').forEach(field => {
+          if (!field.value.trim()) {
+              field.classList.add('form-invalid');
+              isValid = false;
+          } else {
+              field.classList.remove('form-invalid');
+              field.classList.add('form-valid');
+          }
+      });
+      
+      if (!isValid) {
+          alert('Пожалуйста, заполните все обязательные поля.');
+          return;
+      }
+      
+      // Если форма валидна, отправляем ее
+      this.submit();
+  });
+
+  
+});

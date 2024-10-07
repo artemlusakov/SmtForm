@@ -68,33 +68,31 @@ window.addEventListener("DOMContentLoaded", function() {
 
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-  const form = document.getElementById('MainForm');
-  
-  // Обработчик отправки формы
-  form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      // Проверяем заполненность всех обязательных полей
-      let isValid = true;
-      form.querySelectorAll('.required-field').forEach(field => {
-          if (!field.value.trim()) {
-              field.classList.add('form-invalid');
-              isValid = false;
-          } else {
-              field.classList.remove('form-invalid');
-              field.classList.add('form-valid');
-          }
-      });
-      
-      if (!isValid) {
-          alert('Пожалуйста, заполните все обязательные поля.');
-          return;
-      }
-      
-      // Если форма валидна, отправляем ее
-      this.submit();
-  });
 
-  
+document.addEventListener('DOMContentLoaded', function() {
+    const requiredFields = document.querySelectorAll('.required-field');
+    const submitButton = document.querySelector('.SmtFormButton');
+
+    function allRequiredFieldsFilled() {
+        return Array.from(requiredFields).every(field => field.value.trim() !== '');
+    }
+
+    function toggleSubmitButtonClasses() {
+        if (allRequiredFieldsFilled()) {
+            submitButton.classList.remove('Disabl');
+            submitButton.classList.add('Activ');
+        } else {
+            submitButton.classList.remove('Activ');
+            submitButton.classList.add('Disabl');
+        }
+    }
+
+    // Инициализация состояния кнопки
+    toggleSubmitButtonClasses();
+
+    // Добавляем слушатели событий для всех полей
+    requiredFields.forEach(field => {
+        field.addEventListener('input', toggleSubmitButtonClasses);
+        field.addEventListener('change', toggleSubmitButtonClasses);
+    });
 });

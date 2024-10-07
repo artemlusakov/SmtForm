@@ -159,10 +159,15 @@
   border: 1px solid transparent;
   height: 50px;
   width: 200px;
-  background-color: #3f62ff;
   color: #fefefe;
   border-radius: 0 15px;
   transition: 1.5s;
+}
+.Disabl button {
+  background-color: #888;
+}
+.Activ button{
+  background-color: #3f62ff;
 }
 
 .SmtFormButton button:hover,

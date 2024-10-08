@@ -69,6 +69,267 @@ window.addEventListener("DOMContentLoaded", function() {
 });
 
 
+let autocomplete = [
+   'Mосква',
+    'Санкт-Петербург',
+    'Нижний Новгород',
+    'Екатеринбург',
+    'Новосибирск',
+    'Казань',
+    'Омск',
+    'Челябинск',
+    'Красноярск',
+    'Уфа',
+    'Воронеж',
+    'Саратов',
+    'Тольятти',
+    'Ижевск',
+    'Барнаул',
+    'Владивосток',
+    'Астрахань',
+    'Пенза',
+    'Киров',
+    'Курган',
+    'Махачкала',
+    'Рязань',
+    'Липецк',
+    'Томск',
+    'Хабаровск',
+    'Волгоград',
+    'Калуга',
+    'Оренбург',
+    'Новороссийск',
+    'Кемерово',
+    'Чебоксары',
+    'Иркутск',
+    'Ульяновск',
+    'Кострома',
+    'Калининград',
+    'Тверь',
+    'Сочи',
+    'Ярославль',
+    'Вологда',
+    'Крымск',
+    'Ставрополь',
+    'Краснодар',
+    'Нижневартовск',
+    'Пермь',
+    'Тула',
+    'Кирово-Чепецк',
+    'Симферополь',
+    'Серпухов',
+    'Анапа',
+    'Грозный',
+    'Магадан',
+    'Салехард',
+    'Нарьян-Мар',
+    'Анадырь',
+    'Великий Устюг',
+    'Архангельск',
+    'Сыктывкар',
+    'Петрозаводск',
+    'Мурманск',
+    'Владикавказ',
+    'Минеральные Воды',
+    'Нальчик',
+    'Кисловодск',
+    'Ессентуки',
+    'Пятигорск',
+    'Туапсе',
+    'Тамбов',
+    'Брянск',
+    'Смоленск',
+    'Орел',
+    'Курск',
+    'Белгород',
+    'Липецк',
+    'Тамбов',
+    'Рязань',
+    'Мордовия',
+    'Пензенская область',
+    'Саратов',
+    'Ульяновск',
+    'Нижний Новгород',
+    'Киров',
+    'Кострома',
+    'Ярославль',
+    'Владимир',
+    'Иваново',
+    'Калуга',
+    'Тверь',
+    'Московская область',
+    'Ленинградская область',
+    'Новгород',
+    'Псков',
+    'Вологда',
+    'Архангельск',
+    'Мурманск',
+    'Карелия',
+    'Коми',
+    'Мордовия',
+    'Удмуртия',
+    'Башкирия',
+    'Чувашия',
+    'Татарстан',
+    'Мари Эл',
+    'Киров',
+    'Нижегородская область',
+    'Пензенская область',
+    'Саратов',
+    'Ульяновск',
+    'Астрахань',
+    'Волгоград',
+    'Калмыкия',
+    'Ставрополь',
+    'Краснодар',
+    'Адыгея',
+    'Кабардино-Балкария',
+    'Карачаево-Черкесия',
+    'Ингушетия',
+    'Дагестан',
+    'Чечня',
+    'Северный Кавказ',
+    'Ростов-на-Дону',
+    'Южный федеральный округ',
+    'Центральный федеральный округ',
+    'Сибирский федеральный округ',
+    'Дальневосточный федеральный округ',
+    'Уральский федеральный округ',
+    'Северо-западный федеральный округ',
+    'Приволжский федеральный округ',
+    'Крымский федеральный округ',
+    'Красноярский край',
+    'Иркутская область',
+    'Новосибирская область',
+    'Омская область',
+    'Томская область',
+    'Алтайский край',
+    'Кемеровская область',
+    'Новокузнецк',
+    'Красноярск',
+    'Иркутск',
+    'Новосибирск',
+    'Омск',
+    'Томск',
+    'Барнаул',
+    'Хабаровск',
+    'Владивосток',
+    'Екатеринбург',
+    'Челябинск',
+    'Самара',
+    'Нижний Новгород',
+    'Казань',
+    'Пермь',
+    'Волгоград',
+    'Ростов-на-Дону',
+    'Краснодар',
+    'Санкт-Петербург',
+    'Сочи',
+    'Анапа',
+    'Минеральные Воды',
+    'Пятигорск',
+    'Ессентуки',
+    'Туапсе',
+    'Новороссийск',
+    'Тверь',
+    'Киров',
+    'Курск',
+    'Белгород',
+    'Липецк',
+    'Тамбов',
+    'Орск',
+    'Пенза',
+    'Саратов',
+    'Ульяновск',
+    'Кострома',
+    'Иваново',
+    'Калуга',
+    'Владимир',
+    'Смоленск',
+    'Орел',
+    'Мурманск',
+    'Архангельск',
+    'Сыктывкар',
+    'Петрозаводск',
+    'Магадан',
+    'Салехард',
+    'Нарьян-Мар',
+    'Анадырь',
+    'Великий Устюг',
+    'Калининград',
+    'Махачкала',
+    'Грозный',
+    'Симферополь',
+    'Севастополь'
+
+
+];
+
+window.onload = function() {
+  document.getElementById('Sity').onkeyup = keyUp;
+}
+
+function keyUp(e) {
+  var e = e || window.event;
+  switch (e.keyCode) {
+    case 40:
+      var selected = -1;
+      var spans = document.getElementById('autocomplete').getElementsByTagName('span');
+      for (i = 0; i <= spans.length; i++)
+        if (i in spans && spans[i].className == 'selected') {
+          spans[i].className = '';
+          selected = i;
+        }
+      selected++;
+      for (i = 0; i <= spans.length; i++)
+        if (i in spans && i == selected) {
+          spans[i].className = 'selected';
+        }
+      break;
+    case 38:
+      var spans = document.getElementById('autocomplete').getElementsByTagName('span');
+      var selected = spans.length;
+      for (i = 0; i <= spans.length; i++)
+        if (i in spans && spans[i].className == 'selected') {
+          spans[i].className = '';
+          selected = i;
+        }
+      selected--;
+      for (i = 0; i <= spans.length; i++)
+        if (i in spans && i == selected) {
+          spans[i].className = 'selected';
+        }
+      break;
+    case 13:
+      var spans = document.getElementById('autocomplete').getElementsByTagName('span');
+      for (i = 0; i <= spans.length; i++)
+        if (i in spans && spans[i].className == 'selected') {
+          document.getElementById('Sity').value = spans[i].innerHTML;
+          document.getElementById('autocomplete').innerHTML = '';
+        }
+      break;
+    default:
+      var div = document.getElementById('autocomplete');
+      var value = document.getElementById('Sity').value;
+      div.innerHTML = '';
+      if (value.length > 0) {
+        autocomplete.forEach(function(elem, index) {
+          var regex = new RegExp("^" + value, "i");
+          //if(elem.includes(value)) {
+          if (elem.match(regex)) {
+            var click_func = "choice_city('" + autocomplete[index] + "')"; 
+            div.innerHTML += '<span onclick="' + click_func + '">' + autocomplete[index] + '</span><br />';
+          }
+        });
+      }
+  }
+}
+var choice_city = function(city_name){
+   document.getElementById('Sity').value = city_name;
+   document.getElementById('autocomplete').innerHTML = '';
+};
+
+// Условие отображения активности кнопки 
 document.addEventListener('DOMContentLoaded', function() {
     const requiredFields = document.querySelectorAll('.required-field');
     const submitButton = document.querySelector('.SmtFormButton');

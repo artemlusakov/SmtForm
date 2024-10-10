@@ -105,6 +105,10 @@
   justify-content: space-between;
   width: 45%;
 }
+.SmtFormMiniBoxQR img{
+  width: 200px;
+  height: 200px;
+}
 .SmtFormLevelProduct{
   display: flex;
   flex-direction: column;
@@ -222,6 +226,15 @@
 
 @media screen and (max-width: 500px) {
 
+  .SmtForm{
+    width: 100%;
+  }
+  .SmtForm input::placeholder{
+    font-size: 10px;
+  }
+  .SmtForm input{
+    font-size: 15px;
+  }
   .modal-content{
     width: 100%;
   }
